@@ -14,6 +14,9 @@
 
 <body>
   <div class="bg">
+    <div class="bankIcon">
+      <img src="./assets/ZS.svg"/>
+    </div>
     <div class="money"></div>
     <div class="time"></div>
     <div class="bank"></div>
@@ -37,10 +40,10 @@
     let str1 = Math.floor(Math.random() * 10000000000000)
 
     let rand_1 = Math.floor(Math.random() * 4);
-    let bank = ['工商银行', '建设银行', '招商银行', '农业银行', '中国银行', '交通银行']
+    // let bank = ['工商银行', '建设银行', '招商银行','招商银行','招商银行' '农业银行', '中国银行', '交通银行']
+    let bank = ['招商银行','招商银行','招商银行','招商银行' ]
     let card = ['储蓄卡', '信用卡']
     let card_no = Math.floor(Math.random() * 10000)
-    console.log("hex_rand", rand_1)
     let bank_txt = bank[rand_1] + card[rand_1 % 2] + '(' + card_no + ')'
 
     document.getElementsByClassName("time")[0].innerHTML = year + "年" + mon + "月" + date + "日 " + h + ":" + m + ":" + s
