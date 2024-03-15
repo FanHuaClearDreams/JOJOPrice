@@ -13,18 +13,58 @@
 </head>
 
 <body>
-  <div class="bg">
-    <div class="bankIcon">
-      <img src="./assets/ZS.svg"/>
+  <div>
+    <div class="top-bar">
+      <div class="closeIcon"><img src="./assets/close.svg"/></div>
+      <div class="value menu">全部账单</div>
     </div>
+    <div class="bankIcon">
+      <img src="./assets/P_ZS.svg"/>
+    </div>
+    <div class="companyName value">成都书声科技有限公司</div>
     <div class="money"></div>
-    <div class="time"></div>
-    <div class="bank"></div>
-    <div class="code"></div>
-    <div class="paycode"></div>
+  </div>
+  <div class="splitLine"></div>
+  <div class="bg">
+    <div class="line-bar">
+      <div class="name">当前状态</div>
+      <div class="value">支付成功</div>
+    </div>
+    <div class="line-bar">
+      <div class="name">支付时间</div>
+      <div class="value time"></div>
+    </div>
+    <div class="line-bar">
+      <div class="name">商品</div>
+      <div class="value">成都书声科技有限公司</div>
+    </div>
+    <div class="line-bar">
+      <div class="name">商品全称</div>
+      <div class="value">成都书声科技有限公司</div>
+    </div>
+    <div class="line-bar">
+      <div class="name">收单机构</div>
+      <div class="value bank">成都书声科技有限公司</div>
+    </div>
+    <div class="line-bar">
+      <div class="name">  </div>
+      <div class="value tips">由网联清算有限公司提供收款清算服务</div>
+    </div>
+    <div class="line-bar">
+      <div class="name">支付方式</div>
+      <div class="value">零钱</div>
+    </div>
+    <div class="line-bar">
+      <div class="name">交易单号</div>
+      <div class="value code"></div>
+    </div>
+    <div class="line-bar">
+      <div class="name">商户单号</div>
+      <div class="value paycode"></div>
+    </div>
   </div>
   <script>
-    let money = location.search.split("=")[1]
+    let money = location.search.split("=")[1] || '-1800.00'
     let year = new Date().getFullYear()
     let mon = new Date().getMonth() + 1
     let date = new Date().getDate()
