@@ -84,7 +84,7 @@
     let bank = ['招商银行','招商银行','招商银行','招商银行' ]
     let card = ['储蓄卡', '信用卡']
     let card_no = Math.floor(Math.random() * 10000)
-    let bank_txt = bank[rand_1] + card[rand_1 % 2] + '(' + card_no + ')'
+    let bank_txt = bank[rand_1] + card[rand_1 % 2]
 
     document.getElementsByClassName("time")[0].innerHTML = year + "年" + mon + "月" + date + "日 " + h + ":" + m + ":" + s
     document.getElementsByClassName("code")[0].innerHTML = str + "" + str1
