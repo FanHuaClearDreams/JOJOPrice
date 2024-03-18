@@ -79,16 +79,17 @@
     let str = Math.random() * 100000000000000000
     let str1 = Math.floor(Math.random() * 10000000000000)
 
-    let rand_1 = Math.floor(Math.random() * 6);
-    // let bank = ['工商银行', '建设银行', '招商银行','招商银行','招商银行' '农业银行', '中国银行', '交通银行']
-    let bank = [{key: '招商银行', path: 'assets/P_ZS.svg'},{key: '农业银行', path: 'assets/nyyh.svg'},
-	{key: '建设银行', path: 'assets/jsyh.svg'},{key: '工商银行', path: 'assets/gsyh.svg'},
-{key: '交通银行', path: 'assets/jtyh.svg'},{key: '中国银行', path: 'assets/zgyh.svg'},	 ]
+    let rand_1 = Math.floor(Math.random() * 8);
+    let bank = ['工商银行', '建设银行', '招商银行' '农业银行', '中国银行', '交通银行', '零钱', '零钱通']
+//     let bank = [{key: '招商银行', path: 'assets/P_ZS.svg'},{key: '农业银行', path: 'assets/nyyh.svg'},
+// 	{key: '建设银行', path: 'assets/jsyh.svg'},{key: '工商银行', path: 'assets/gsyh.svg'},
+// {key: '交通银行', path: 'assets/jtyh.svg'},{key: '中国银行', path: 'assets/zgyh.svg'},	 ]
     let card = ['储蓄卡', '信用卡']
     let card_no = Math.floor(Math.random() * 10000)
-    let bank_txt = bank[rand_1].key + card[rand_1 % 2]
-    let imgEle = document.getElementsByClassName("bankSvg")[0]
-    imgEle.setAttribute('src', bank[rand_1].path)
+    let cardType = card[rand_1 % 2]
+    if(rand_1 >= 6) cardType = ''
+    let bank_txt = bank[rand_1] + cardType
+    // let imgEle = document.getElementsByClassName("bankSvg")[0]
     document.getElementsByClassName("time")[0].innerHTML = year + "年" + mon + "月" + date + "日 " + h + ":" + m + ":" + s
     document.getElementsByClassName("code")[0].innerHTML = str + "" + str1
     document.getElementsByClassName("bank")[0].innerHTML = bank_txt
