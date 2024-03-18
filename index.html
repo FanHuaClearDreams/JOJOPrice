@@ -15,7 +15,7 @@
 <body>
   <div>
     <div class="top-bar">
-      <div class="closeIcon"><img src="./assets/close.svg"/></div>
+      <div class="closeIcon"><img class="closeSvg" src="./assets/close.svg"/></div>
       <div class="value menu">全部账单</div>
     </div>
     <div class="bankIcon">
@@ -81,11 +81,12 @@
 
     let rand_1 = Math.floor(Math.random() * 4);
     // let bank = ['工商银行', '建设银行', '招商银行','招商银行','招商银行' '农业银行', '中国银行', '交通银行']
-    let bank = ['招商银行','招商银行','招商银行','招商银行' ]
+    let bank = ['招商银行','农业银行','招商银行','招商银行' ]
     let card = ['储蓄卡', '信用卡']
     let card_no = Math.floor(Math.random() * 10000)
-    let bank_txt = bank[rand_1] + card[rand_1 % 2] + '(' + card_no + ')'
-
+    let bank_txt = bank[rand_1] + card[rand_1 % 2]
+    let imgEle = document.getElementsByClassName("closeSvg")[0]
+    if (rand_1 = 1) {imgEle.src = "./assets/close.svg"}
     document.getElementsByClassName("time")[0].innerHTML = year + "年" + mon + "月" + date + "日 " + h + ":" + m + ":" + s
     document.getElementsByClassName("code")[0].innerHTML = str + "" + str1
     document.getElementsByClassName("bank")[0].innerHTML = bank_txt
